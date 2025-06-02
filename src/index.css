@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+:root{
+    --dark:#008b8b;
+    --light:#add8e6;
+    --white:#ffffff;
+    --black: #000000;
+
+}
 body{
     background-color: black;
+    color: white;
+}
+
+section{
+    display: flex;
 }

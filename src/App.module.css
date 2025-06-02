@@ -91,7 +91,7 @@
     font-weight: bold;
 }
 
-.wrapForm button :hover{
+.wrapForm button:hover{
     border: 2px solid transparent;
     background-color: lightblue;
     color: white;

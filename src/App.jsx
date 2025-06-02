@@ -20,7 +20,7 @@ function App() {
 
       localStorage.setItem('user', JSON.stringify(user));
       setUser(user)
-      navigate('/userList')
+      navigate('/dashboard')
     } catch (error) {
       setMessage('Erro no login' + (error.response?.data?.message || 'Verifique os dados'))
     }
@@ -30,7 +30,7 @@ function App() {
     const storedUser = localStorage.getItem('user')
     if(storedUser){
       setUser(JSON.parse(storedUser))
-      navigate('/userList')
+      navigate('/dashboard')
     }
   },[navigate])
   return (
