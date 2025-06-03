@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { api } from "./api/api.ts";
 import { useNavigate } from "react-router";
 import style from "./App.module.css"
+import Eye from "./assets/icons8-eye.gif"
 
 function App() {
   const navigate = useNavigate()
@@ -11,6 +12,7 @@ function App() {
   const [password, setPassword] =  useState('')
   const [user, setUser] =  useState(null)
   const [message, setMessage] =  useState('')
+  const [showPassword,  setShowPassword] = useState(false)
 
   const handleLogin = async(e) => {
     e.preventDefault()
@@ -45,7 +47,10 @@ function App() {
         <form onSubmit={handleLogin}>
           <h2>Login</h2>
           <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-          <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+          <div style={{position: "relative", width: "100%"}}>
+            <input type={showPassword ? 'text' : 'password'} placeholder='Senha' value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <img onClick={() => setShowPassword(prev => !prev)} style={{position: "absolute", width: '20px', borderRadius: '100%', right: '10px', top: '10px', cursor: 'pointer'}} src={Eye} alt="Olho da senha" />
+          </div>
         <button type='submit'>Entrar</button>
         <p className={style.userCad}>Cadastrar usuário</p>
         <p>{message}</p>
