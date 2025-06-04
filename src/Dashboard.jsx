@@ -37,7 +37,7 @@ function DashBoard(){
                 <div className={styles.wrapItem} onClick={() => navigate('/#')}>
                     <p>Criar produto</p> 
                 </div>
-                <div className={styles.wrapItem} onClick={() => navigate('/#')}>
+                <div className={styles.wrapItem} onClick={() => navigate('/listproducts')}>
                     <p>Lista de produtos</p> - ({productsCont} produtos)
                 </div>
                 <div className={styles.wrapItem} onClick={() => navigate('/#')}>
@@ -45,6 +45,9 @@ function DashBoard(){
                 </div>
                 <div className={styles.wrapItem} onClick={() => navigate('/userList')}>
                     <p>Lista de usuarios</p> - ({productsCont} usuarios)
+                </div>
+                <div className={styles.wrapItem} onClick={() => navigate('/contact')}>
+                    <p>Contato</p>
                 </div>
             </div>
         </section>

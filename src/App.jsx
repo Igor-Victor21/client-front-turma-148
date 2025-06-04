@@ -4,6 +4,8 @@ import { api } from "./api/api.ts";
 import { useNavigate } from "react-router";
 import style from "./App.module.css"
 import Eye from "./assets/icons8-eye.gif"
+import Contact from './Contact'
+
 
 function App() {
   const navigate = useNavigate()
@@ -26,6 +28,10 @@ function App() {
     } catch (error) {
       setMessage('Erro no login' + (error.response?.data?.message || 'Verifique os dados'))
     }
+  }
+
+  const handleContactClick = () => {
+    navigate('/contact')
   }
 
   useEffect(() => {
@@ -55,6 +61,9 @@ function App() {
         <p className={style.userCad}>Cadastrar usuário</p>
         <p>{message}</p>
         </form>
+        <div className={style.wrapContact}>
+              <button onClick={handleContactClick}>Entrar em Contato</button>
+            </div>
       </div>
     </div>
   )

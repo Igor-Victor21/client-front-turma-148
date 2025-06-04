@@ -1,0 +1,55 @@
+.wrapMensagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    width: 350px;
+    border: 2px solid #add8e6;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: lightblue 0px 5px 15px;
+    gap: 2vh;
+    animation: faderight 1s ease-in-out;
+}
+
+.wrapMensagem h1{
+    color: lightblue;
+}
+
+.wrapMensagem input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    border: 2px solid lightblue;
+    background-color: #008b8b;
+    color: white;
+}
+
+.wrapMensagem textarea {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    border: 2px solid lightblue;
+    background-color: darkcyan;
+    color: white;
+}
+
+.wrapMensagem button {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: darkcyan;
+    color: lightblue;
+    font-weight: bold;
+    border: 2px solid lightblue;
+    transition: all 200ms ease-in-out;
+}
+
+.wrapMensagem button:hover {
+    border: 2px solid transparent;
+    background-color: lightblue;
+    color: white;
+    cursor: pointer;
+    box-shadow: lightblue 0px 5px 15px;
+}

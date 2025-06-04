@@ -110,6 +110,11 @@
     cursor: pointer;
 }
 
+.wrapContact{
+    margin-top: 10px;
+}
+
+
 
 @keyframes faderight {
     0%{
